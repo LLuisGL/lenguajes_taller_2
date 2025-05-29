@@ -26,7 +26,7 @@ class SolicitudController extends Controller
      */
     public function create()
     {
-        return view("create");
+        
     }
 
     /**
@@ -37,7 +37,9 @@ class SolicitudController extends Controller
      */
     public function store(Request $request)
     {
-        
+        Solicitud::create($request->all());
+        return redirect("project/")
+            ->with("success","proyecto creado satisfactoriamente");
     }
 
     /**

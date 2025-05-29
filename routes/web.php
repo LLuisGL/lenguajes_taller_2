@@ -14,5 +14,9 @@ use App\Http\Controllers\SolicitudController;
 |
 */
 
+Route::get('/crear', function () {
+    return view('create');
+});
+
 Route::resource("project", SolicitudController::class);
 
